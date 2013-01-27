@@ -1,19 +1,25 @@
 <!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
+Purpose: Class 2 Experiments
+Author: Greg Bahr
+Revision: 2.0
 -->
 <!DOCTYPE html>
 <html>
     <head>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            a:link{color:#F8F8FF;}
+            a:visited{color:#F8F8FF;}
+            
+        </style>
         <script>
         function popUp(){
-           alert("49ers-Ravens"); 
+           alert("San Francisco 49ers vs. Baltimore Ravens"); 
         }
     </script>
     <script type="text/javascript">
-function cdtd() {
+function countdown() {
 	var superBowl = new Date("February 3, 2013 17:30:00");
 	var now = new Date();
 	var timeDiff = superBowl.getTime() - now.getTime();
@@ -33,19 +39,39 @@ function cdtd() {
 	document.getElementById("hoursBox").innerHTML = hours;
 	document.getElementById("minsBox").innerHTML = minutes;
 	document.getElementById("secsBox").innerHTML = seconds;
-	var timer = setTimeout('cdtd()',1000);
+	var timer = setTimeout('countdown()',1000);
 }
 </script>
     </head>
        
     <body>
-        <div>
-            Who's playing in the Super Bowl?
+        <div style="font-size:20px;color:white;width:320px;height:10px;
+             padding:40px;background-color:#800080">
+            Who is playing in the Super Bowl?
          <input type="button" onclick="popUp()" value="Answer"/> 
          
         </div></br>
-        <div>
-        How long until game time?
+        
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+             style="font-size:20px;color:white;width:320px;height:10px;
+             padding:40px;background-color:#800000;">
+            When is the game being played?</div></br>
+
+<script>
+function mOver(obj)
+{
+obj.innerHTML="2/3/2013, 5:30 PM Central Time"
+}
+
+function mOut(obj)
+{
+obj.innerHTML="When is the game being played?"
+}
+</script>
+   
+        <div style="font-size:20px;color:white;width:320px;height:10px;
+             padding:40px;background-color:#800080;">
+        How long until kick off?</br>
 <span id="daysBox"></span>
 days
 <span id="hoursBox"></span>
@@ -54,10 +80,11 @@ hours
 minutes
 <span id="secsBox"></span>
 seconds
-<script type="text/javascript">cdtd();</script>
+<script type="text/javascript">countdown();</script>
         </div> </br> 
-        <div>
-            What's the <a href="http://www.footballlocks.com/nfl_lines.shtml">     
+        <div style="font-size:20px;color:white;width:320px;height:10px;
+             padding:40px;background-color:#800000;">
+            What is the <a href="http://www.footballlocks.com/nfl_lines.shtml">     
             current point spread</a>?
         </div>
     </body>
