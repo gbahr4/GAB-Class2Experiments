@@ -1,0 +1,64 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+        function popUp(){
+           alert("49ers-Ravens"); 
+        }
+    </script>
+    <script type="text/javascript">
+function cdtd() {
+	var superBowl = new Date("February 3, 2013 17:30:00");
+	var now = new Date();
+	var timeDiff = superBowl.getTime() - now.getTime();
+	if (timeDiff <= 0) {
+        clearTimeout(timer);
+		document.write("The Super Bowl is underway!");
+		
+    }
+	var seconds = Math.floor(timeDiff / 1000);
+	var minutes = Math.floor(seconds / 60);
+	var hours = Math.floor(minutes / 60);
+	var days = Math.floor(hours / 24);
+	hours %= 24;
+    minutes %= 60;
+    seconds %= 60;
+	document.getElementById("daysBox").innerHTML = days;
+	document.getElementById("hoursBox").innerHTML = hours;
+	document.getElementById("minsBox").innerHTML = minutes;
+	document.getElementById("secsBox").innerHTML = seconds;
+	var timer = setTimeout('cdtd()',1000);
+}
+</script>
+    </head>
+       
+    <body>
+        <div>
+            Who's playing in the Super Bowl?
+         <input type="button" onclick="popUp()" value="Answer"/> 
+         
+        </div></br>
+        <div>
+        How long until game time?
+<span id="daysBox"></span>
+days
+<span id="hoursBox"></span>
+hours
+<span id="minsBox"></span>
+minutes
+<span id="secsBox"></span>
+seconds
+<script type="text/javascript">cdtd();</script>
+        </div> </br> 
+        <div>
+            What's the <a href="http://www.footballlocks.com/nfl_lines.shtml">     
+            current point spread</a>?
+        </div>
+    </body>
+</html>
